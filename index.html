@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Andrey Petrikov - FE dev</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+</head>
+<body>
+<main>
+    <header>
+        <article class="about bottom-border">
+            <h3>Andrey&nbsp;Petrikov - Frontend&nbsp;developer</h3>
+            <p>Saint Petersburg, Russia</p>
+            <div class="links">
+                <p><a href="https://www.linkedin.com/in/unimhet" target="_blank">Linkedin</a></p>
+                <p><a href="https://t.me/unimhet" target="_blank">Telegram</a></p>
+                <p><a href="mailto:jnmort@gmail.com">@mail</a></p>
+                <p><a href="">Download</a></p>
+            </div>
+        </article>
+        <figure>
+            <img src="img/ap.jpg" alt="Photo" class="photo">
+        </figure>
+    </header>
+    <div class="skills bottom-border">
+        <section class="skill">
+            <p class="static-text">English</p>
+            <p class="static-text">Russian</p>
+        </section>
+        <section class="skill">
+            <p class="static-text">Vue - Vuex</p>
+            <p class="static-text">React - Redux</p>
+        </section>
+        <section class="skill">
+            <p class="static-text">Agile</p>
+            <p class="static-text">Simplicity</p>
+        </section>
+    </div>
+    <article class="bottom-border">
+        <p>Starting in the very beginning from Basic and Pascal I came to modern frontend frameworks like Vue and React.
+            It was a long and interesting journey. Through vanilla JS and JQuery jungles full of unexpected inputs and
+            impressive solutions.</p>
+
+        <p>Now I am addicted to FE development. Like Flux-architecture and one-way data binding. Avoid endless meetings.
+            After years of teamwork I am thoroughly convinced that communication between developers is more valuable
+            for the product than their skills.</p>
+    </article>
+    <article class="bottom-border">
+        <span class="current-year year"></span><h4><a href="https://www.t-systems.ru/" target="_blank">Deutsche Telekom
+        IT Solutions</a></h4>
+        <p>Full dev cycle. Support agile way of development.</p>
+        <ul>
+            <li>Close connections with testers, devops, BE devs.</li>
+            <li>Configuring REST API.</li>
+            <li>Fixing bugs, fixing urgent hot bugs.</li>
+            <li>Covering code with unit-tests.</li>
+            <li>Implementing new features, refactoring old legacy codebase, creating internal apps for other devs.</li>
+        </ul>
+        <p><span class="bold">FE:</span> Vue - Vuex / React - Redux / Jest, Webpack, ESLint, Gitlab</p>
+        <p><span class="bold">Tools:</span> Figma, Confluence</p>
+    </article>
+    <article class="bottom-border">
+        <span class="year">2018</span><h4><a href="https://rtlservice.com" target="_blank">RTL Service</a></h4>
+        <p>Deploying production releases. Integrating in product Stimulsoft reports module.</p>
+        <ul>
+            <li>Adding unit-tests to continuous integration process.</li>
+            <li>Refactoring huge spaghetti-like code base.</li>
+            <li>Redesigning architecture of highload app to follow the one-way React-Redux data flow pattern.
+            </li>
+            <li>Migrating npm modules to latest versions (Webpack, React etc.)
+            </li>
+            <li>Reduced size of release bundle by more than 12 times.</li>
+        </ul>
+        <p><span class="bold">FE:</span> React, Redux, Webpack, Git, ES6+, Websockets, Leaflet</p>
+        <p><span class="bold">Backend:</span> Node,js, PostgreSQL, SQL</p>
+        <p><span class="bold">Tools:</span> YouTrack, Teamcity, pgAdmin4, Stimulsoft</p>
+    </article>
+    <article class="bottom-border">
+        <span class="year">2017</span><h4>Freelance</h4>
+        <p>Creating and supporting CMS websites – blogs and shops.</p>
+
+        <ul>
+            <li>Installing CMS on hosting</li>
+            <li>Full CMS setup to complete website</li>
+            <li>Creating and customizing widgets</li>
+            <li>Working with social media API</li>
+        </ul>
+
+        <p><span class="bold">FE:</span> HTML, CSS, ES5, PHP, SQL</p>
+        <p><span class="bold">Tools:</span> WordPress, Joomla, Atom, phpMyAdmin, openServer</p>
+    </article>
+    <article class="bottom-border">
+        <span class="year">2011</span><h4><a href="https://smurfitkappa.com" target="_blank">Smurfit Kappa</a> -
+        accountant</h4>
+        <p>Created input form for calculating complex data, which increased processing speed by 1.5-2 times</p>
+        <p><span class="bold">Responsibility:</span> Document processing for Logistics and Supply Department</p>
+        <p><span class="bold">Tools:</span> SAP, MS Office</p>
+    </article>
+    <article>
+        <h4>Education</h4>
+
+        <p><span class="year">2016</span>
+        <p class="first-line">St. Petersburg State Technological Institute (Technical University)</p>
+        <span class="italic">Faculty of Computer Technologies, Computer machines, complexes, systems and networks</span>
+        <p><span class="year">2012</span>
+        <p class="first-line">St. Petersburg State University, Saint Petersburg</p>
+        <span class="italic">Faculty of Oriental Studies, Extinct languages and ancient mathematics</span>
+    </article>
+
+    <div class="sticky">
+        <button class="top-button" title="To top">
+            <div class="arrow">
+                <div class="shadow-arrow"></div>
+            </div>
+        </button>
+    </div>
+</main>
+
+<script>
+    var currentYearEl = document.getElementsByClassName("current-year")[0];
+    var date = new Date();
+    currentYearEl.innerHTML = date.getFullYear();
+
+    var rootElement = document.documentElement
+    var upButton = document.getElementsByClassName("top-button")[0];
+    upButton.addEventListener("click", scrollTop);
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            upButton.style.display = "flex";
+        } else {
+            upButton.style.display = "none";
+        }
+    }
+
+    function scrollTop() {
+        rootElement.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+</script>
+
+</body>
+</html>

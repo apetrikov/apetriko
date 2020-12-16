@@ -1,0 +1,159 @@
+body {
+    display: flex;
+    justify-content: center;
+    background: rgb(146, 228, 202);
+
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    background: white;
+    border-radius: 25px;
+    filter: drop-shadow(0 0 6px white);
+    width: 60vw;
+    min-width: 320px;
+    max-width: 700px;
+    padding: 5px 15px;
+}
+
+@media screen and (max-width: 884px) {
+    .about {
+        text-align: center;
+    }
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+.photo {
+    float: right;
+    border-radius: 50%;
+    width: 130px;
+}
+
+.about {
+    flex: 1;
+    min-width: 320px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-border {
+    border-bottom: 1px solid rgb(146, 228, 202);
+}
+
+.year {
+    display: inline-block;
+    position: absolute;
+    left: -50px;
+    color: white;
+}
+
+.skills {
+    display: flex;
+}
+
+.skill {
+    flex: 1;
+    min-width: 100px;
+    color: rgb(0, 200, 140);
+    text-align: center;
+}
+
+.static-text {
+    cursor: default;
+}
+
+.first-line {
+    margin-bottom: 5px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-family: system-ui;
+}
+
+a:link {
+    color: rgb(0, 200, 140);
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(0, 200, 140);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(0, 180, 120);
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(0, 180, 120);
+    text-decoration: underline;
+}
+
+li::marker {
+    color: rgb(146, 228, 202);
+}
+
+.sticky {
+    position: sticky;
+    bottom: 0;
+    float: right;
+}
+
+.top-button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid rgb(146, 228, 202);
+}
+
+.top-button:hover .arrow{
+    border-bottom: 15px solid rgb(0, 180, 120);
+    animation: direction 1s ease-out infinite;
+}
+
+.shadow-arrow {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid white;
+    margin-top: 5px;
+}
+
+@keyframes direction {
+    0% { margin: 0 0 0 0; opacity: 1;}
+    50% { margin: 0 0 15px 0; opacity: 0; }
+    51% { margin: 15px 0 0 0; opacity: 0;}
+    100% { margin: 0 0 0 0; opacity: 1;}
+}
