@@ -84,12 +84,12 @@ header {
 
 a:link {
     color: rgb(0, 200, 140);
-    text-decoration: none;
+    /*text-decoration: none;*/
 }
 
 a:visited {
     color: rgb(0, 200, 140);
-    text-decoration: none;
+    /*text-decoration: none;*/
 }
 
 a:hover {
