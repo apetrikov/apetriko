@@ -15,10 +15,9 @@
             <h2>Andrey&nbsp;Petrikov - Frontend&nbsp;developer</h2>
             <p>Saint Petersburg, Russia</p>
             <div class="links">
+                <p><a href="mailto:jnmort@gmail.com">jnmort@gmail.com</a></p>
                 <p><a href="https://www.linkedin.com/in/unimhet" target="_blank">Linkedin</a></p>
                 <p><a href="https://t.me/unimhet" target="_blank">Telegram</a></p>
-                <p><a href="mailto:jnmort@gmail.com">@mail</a></p>
-                <p><a href="/petrikov_CV.pdf" target="_blank">Download</a></p>
             </div>
         </article>
         <figure>
@@ -117,6 +116,7 @@
                 <div class="shadow-arrow"></div>
             </div>
         </button>
+        <button class="download-button">Download</button>
     </div>
 </main>
 
@@ -124,6 +124,9 @@
     var currentYearEl = document.getElementsByClassName("current-year")[0];
     var date = new Date();
     currentYearEl.innerHTML = date.getFullYear();
+
+    var downloadButton = document.getElementsByClassName("download-button")[0];
+    downloadButton.addEventListener("click", openPdf);
 
     var rootElement = document.documentElement
     var upButton = document.getElementsByClassName("top-button")[0];
@@ -145,6 +148,10 @@
             top: 0,
             behavior: "smooth"
         })
+    }
+
+    function openPdf() {
+        window.open('/petrikov_CV.pdf', '_blank');
     }
 </script>
 

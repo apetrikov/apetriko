@@ -9,8 +9,7 @@ body {
 main {
     background: white;
     border-radius: 25px;
-    filter: drop-shadow(0 0 6px white);
-    width: 60vw;
+    filter: drop-shadow(0 0 0px white);
     min-width: 320px;
     max-width: 700px;
     padding: 5px 15px;
@@ -112,7 +111,28 @@ li::marker {
     float: right;
 }
 
+.download-button {
+    align-items: center;
+    justify-content: center;
+
+    height: 50px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgb(146, 228, 202);
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.download-button:hover {
+    background-color: rgb(0, 180, 120);
+}
+
 .top-button {
+    position: absolute;
+    left: 106px;
+
     display: none;
     align-items: center;
     justify-content: center;
@@ -123,7 +143,7 @@ li::marker {
     outline: none;
     background-color: white;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 25px;
 }
 
 .arrow {
