@@ -54,6 +54,12 @@ header {
     color: white;
 }
 
+.dates {
+    color: gray;
+    font-style: italic;
+    margin-top: -20px;
+}
+
 .skills {
     display: flex;
 }
@@ -133,7 +139,7 @@ li::marker {
     position: absolute;
     left: 106px;
 
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -176,4 +182,10 @@ li::marker {
     50% { margin: 0 0 15px 0; opacity: 0; }
     51% { margin: 15px 0 0 0; opacity: 0;}
     100% { margin: 0 0 0 0; opacity: 1;}
+}
+
+@media screen and (max-width: 540px) {
+    .top-button {
+        display: none;
+    }
 }

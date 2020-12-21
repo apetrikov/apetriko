@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -50,6 +51,7 @@
     <article class="bottom-border">
         <span class="current-year year"></span><h4><a href="https://www.t-systems.ru/" target="_blank">Deutsche Telekom
         IT Solutions</a></h4>
+        <p class="dates">06.2018 - current</p>
         <p>Full dev cycle. Support agile way of development.</p>
         <ul>
             <li>Close connections with testers, devops, BE devs.</li>
@@ -63,6 +65,7 @@
     </article>
     <article class="bottom-border">
         <span class="year">2018</span><h4><a href="https://rtlservice.com" target="_blank">RTL Service</a></h4>
+        <p class="dates">06.2017 - 06.2018</p>
         <p>Reduced size of release bundle by more than 12 times.</p>
         <ul>
             <li>Deploying production releases.</li>
@@ -80,6 +83,7 @@
     </article>
     <article class="bottom-border">
         <span class="year">2017</span><h4>Freelance</h4>
+        <p class="dates">2011 - 2017</p>
         <p>Creating and supporting CMS websites – blogs and shops.</p>
 
         <ul>
@@ -137,9 +141,9 @@
 
     function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            upButton.style.display = "flex";
+            upButton.style.visibility = "visible";
         } else {
-            upButton.style.display = "none";
+            upButton.style.display = "hidden";
         }
     }
 
